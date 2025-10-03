@@ -10,6 +10,10 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("You're Welcome, The API is running. Use /api/integrations/esp endpoints.");
+});
+
 app.use("/api/integrations/esp", integrationRoutes);
 
 const PORT = process.env.PORT || 5001;
