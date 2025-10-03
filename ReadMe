@@ -73,7 +73,7 @@ Response (201):
 
 GET /api/integrations/esp/lists?service=mailchimp
 mind(http://localhost:5000/api/integrations/esp/lists?service=mailchimp)
-or
+                        or
 mind(http://localhost:5000/api/integrations/esp/lists?service=getresponse)
 
 Response Example:
