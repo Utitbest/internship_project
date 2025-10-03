@@ -1,0 +1,89 @@
+# 📧 Email Integration API
+
+This project is a **Node.js + Express backend** that integrates with **Mailchimp** and **GetResponse**.  
+It allows saving & validating API credentials, and fetching email lists/segments from each ESP.
+
+---
+
+## 🚀 Features
+- Save and validate **Mailchimp** and **GetResponse** API keys
+- Store credentials securely in **MongoDB Atlas**
+- Fetch mailing lists / campaigns from connected ESPs
+- RESTful API built with **Express**
+- Organized project structure with models, controllers, and routes
+
+---
+
+## 🛠️ Tech Stack
+- **Node.js** + **Express.js** (Backend framework)
+- **MongoDB Atlas** (Database)
+- **Mongoose** (ODM for MongoDB)
+- **dotenv** (Environment variables)
+- **cors** (Cross-Origin Resource Sharing)
+- **Mailchimp API** + **GetResponse API**
+
+---
+
+
+## ⚙️ Installation
+
+1. Clone the repository:
+
+git clone repo-url
+cd internship_project
+
+
+2. Install dependencies:
+
+npm install
+
+
+3. Create a .env file:
+
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+
+
+4. Start the development server:
+
+npm run dev
+
+
+🔑 API Endpoints
+1. Save Integration (Mailchimp / GetResponse)
+
+POST /api/integrations/esp
+mind(http://localhost:5000/api/integrations/esp)
+
+Request Body:
+
+{
+  "service": "mailchimp",
+  "apiKey": "your-mailchimp-api-key"
+}
+
+
+Response (201):
+
+{ "message": "Integration saved successfully" }
+
+
+
+2. Fetch Lists
+
+GET /api/integrations/esp/lists?service=mailchimp
+mind(http://localhost:5000/api/integrations/esp/lists?service=mailchimp)
+or
+mind(http://localhost:5000/api/integrations/esp/lists?service=getresponse)
+
+Response Example:
+
+{
+  "lists": [
+    { "id": "123", "name": "Newsletter Subscribers" },
+    { "id": "456", "name": "VIP Customers" }
+  ]
+}
+
+
+Developed by Utitbest for internship assessment.
