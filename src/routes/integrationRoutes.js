@@ -1,13 +1,3 @@
-// import express from "express";
-// import { saveIntegration, fetchLists } from "../controllers/integrationController.js";
-
-// const router = express.Router();
-
-// router.post("/", saveIntegration);
-// router.get("/lists", fetchLists);
-
-// export default router;
-
 
 import express from "express";
 import { saveIntegration, fetchLists } from "../controllers/integrationController.js";
